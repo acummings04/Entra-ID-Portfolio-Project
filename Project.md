@@ -1,5 +1,15 @@
+1: Scenario - In this project, I will showcase a simulated environment for a company featuring multiple employees and departments. This company uses Entra ID for its cloud directory services including user authentication services as well as administrator privilege authorization. This project will use Entra ID to create users, groups, assign roles according to department and job responsibilities using least privilege, MFA, conditional access, and privileged identity management. I will also document the lifecycle of a user from onboarding to offboarding.
+2: Business Problem - Since identity management is done manually, there are several created with this process with this process. The first is that we need to create a framework for the lifecycle management of users. Another is the possibility of outdated user access privileges. Since the granting and revoking of privileges is done by an administrator, it is possible that old privileges might be retained after a role change. One final problem is the security of individual accounts, specifically those with higher privileges.
+3: Access Risks - Of the problems listed above, the greatest risk is account security. Since authentication acts as the first line of defense in our project, it is important that we configure strong security using the methods listed above.
+4 Documentation
+5
+6: Recommendations - One of the major recommendations is the use of conditional access. While MFA is helpful as an added layer of security during authentication, it could also become an impediment. Since security and convenience are reversely proportional, the added layer of security could cause inconvenience and wasted time for end users. This is why conditional access is helpful, since you can set policies of when MFA should required, such as when signing in from a new device or when outside the standard geo-zone. 
+
+Another recommendation is for frequent access and permission audits. It is a regular occurrence for employees to be promoted or switch roles, gaining new permissions while no longer needing old ones. For this reason it is normal for old and outdated permissions to be left on accounts, creating new vulnerabilities. It is important that audits be performed on a regular basis, for example weekly, to catch any outdated privileges 
+
+7
 1. Group Creation
-In our simulated company, we have already created 3 groups categorized by departments. Groups are helpful for organizing users while also assigning roles to the group itself, which is then inherited by any users placed within that group. The existing groups can be seen below:
+In our simulated company, we have already created 3 security groups categorized by departments. Groups are helpful for organizing users while also assigning roles to the group itself, which is then inherited by any users placed within that group. The existing groups can be seen below:
 
 <img width="1594" height="918" alt="Screenshot 2026-09-03 172857" src="https://github.com/user-attachments/assets/cbe64cb8-3af0-4d4c-9c6c-f1eeef7b9a7c" />
 
