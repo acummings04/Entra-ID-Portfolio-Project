@@ -10,7 +10,9 @@ Another recommendation is for frequent access and permission audits. It is a reg
 
 7: Differences in a production environment - Although this project helps discuss and remediate some business problems, it does not represent a full IAM solution. Most companies have additional resources and applications that that they must manage user access for. Although this project discusses a solution for user management, it does not cover application management.
 
-Need for automated access reviews
+Another challenge in a production environment is the introduction of new policies. When introducing new policies such as conditional access, there is always a chance that something can go wrong. Although this project gives experience on how to set up and enforce authentication policies, it does not match the nuance of a real environment. Other factors need to be considered such as when a policy is implemented as well as on what scale. For example, it is helpful to test a conditional access policy on an experiment groups to ensure it does not cause any unexpected issues.
+
+Need for automated access reviews - Although this project helps define the importance of access reviews while conducting one for a single account, this project does not match the number of users in a real environment. For this reason, access reviews can be more complex and time consuming than shown in this project. This is why... 
 
 maybe lacking authentication
 
