@@ -17,11 +17,10 @@ Need for automated access reviews - Although this project helps define the impor
 maybe lacking authentication
 
 1. Group Creation
-In our simulated company, we have already created 3 security groups categorized by departments. Groups are helpful for organizing users while also assigning roles to the group itself, which is then inherited by any users placed within that group. The existing groups can be seen below:
-
+In our simulated company, we have already created 3 security groups categorized by departments. Creating groups is the first step toward managing user identities, and can be used to assign roles and permissions to a group. This allows any roles assigned to the group to be inherited to any users assigned within that group, making permission auditing simpler. For this project, we will only be assigning roles at the user level.
 <img width="1594" height="918" alt="Screenshot 2026-09-03 172857" src="https://github.com/user-attachments/assets/cbe64cb8-3af0-4d4c-9c6c-f1eeef7b9a7c" />
 
-We will start by creating a new group, which we will name software development. While creating a new group, we will give it a name and owner while also designating it as a security group. We also have the option to add existing users to the group, but we will create a new user in the next step.
+While creating our new groups, we will name it after the department title to make user management easier. This is also where we could assign baseline permissions to any users in that department, however we would still need to assign higher privileges at the account level. 
 
 <img width="1591" height="920" alt="Screenshot 2026-09-03 173510" src="https://github.com/user-attachments/assets/9c895914-9815-4f81-8525-cbe46f547cd8" />
 
