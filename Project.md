@@ -25,26 +25,24 @@ While creating our new groups, we will name it after the department title to mak
 <img width="1591" height="920" alt="Screenshot 2026-09-03 173510" src="https://github.com/user-attachments/assets/9c895914-9815-4f81-8525-cbe46f547cd8" />
 
 2. User Creation
-Now that we've created a new group, we can create a new user to populate it. Once in the "Users" section, we will create a new user at the top. We also have the option to invite and external user to our directory for b2b purposes, but for this project we will focus on creating a new internal user.
+The first part of the user management lifecycle is creating new users. In this project we will create new users using our domain name but it is also possible to invite external users for b2b collaboration. 
 
 <img width="1598" height="927" alt="Screenshot 2026-09-03 174439" src="https://github.com/user-attachments/assets/1ed10df9-7ddb-4048-9b73-b84ff84caa79" />
 
-Once we start, we can give them a UPN using our existing domain while also setting their display name. Entra will automatically generate a password which should later be reset using the Self-Service Password Reset feature offered by Entra.
-
 <img width="1591" height="936" alt="Screenshot 2026-09-04 213928" src="https://github.com/user-attachments/assets/1a9e49d0-83e5-4cef-9708-ad63a97b165d" />
 
-We also have the ability to assign a user to a group while creating the user, so we will select the group we created earlier. We also have the ability to assign o role to the user upon creation, however you can also assign roles later as we will do.
+We also have the ability to assign a user to a group while creating the user, so we will select the group we created earlier. We also have the ability to assign a role to the user upon creation, however you can also assign roles later as we will do.
 
 <img width="1592" height="936" alt="Screenshot 2026-09-04 214015" src="https://github.com/user-attachments/assets/aba73e2c-45fc-4f75-948c-d976529751d8" />
 
 4. Role Assignment
 
-We can now select the new user and navigate to the assigned roles tab. From here we can select "Add assignments" at the top to give the user a role. Since our user in this scenario is a software developer, we should only give roles with permissions that are strictly needed for their job. For us this would include roles regarding application development as seen in the screenshot below. The purpose of role based access control is enforce least privilege, meaning that users get the bare minimum permissions they need. This is meant to limit the scope of damage that can be caused in the event of an account breach.
+Since our user in this scenario is a software developer, we should only give roles with permissions that are strictly needed for their job. For us this would include roles regarding application development as seen in the screenshot below. The purpose of role based access control is enforce least privilege, meaning that users get the bare minimum permissions they need. This is meant to limit the scope of damage that can be caused in the event of an account breach. This is the first major step in enforcing authorization and is one of the key components of IAM.
 
 <img width="1592" height="921" alt="Screenshot 2026-09-04 214623" src="https://github.com/user-attachments/assets/2c1b2f50-4837-43ac-b9b5-dc6f711a07bb" />
 
 5. Enforcing MFA
-
+One of the steps we can take to mitigate the risk of authentication security is enabling MFA for users. By adding an extra layer of security, we can reduce the likelihood of an account compromise through a standard password. One of the better options is the Microsoft authenticator app.
 
 
 6. Conditional Access
@@ -56,7 +54,8 @@ We can now select the new user and navigate to the assigned roles tab. From here
 
 
 8. Role Change + Access Audit
-
+When a user changes roles it is important to not only provide them with the privileges needed for their new job, but to also remove any old privileges that are no longer needed. This is an important step of the user management lifecycle that helps reduce the risk of excessive privileges as outlined earlier. In this example, when the employee moves from software development to finance, we need to first remove any old privileges related to application development. If we used group assigned roles, moving them to a different security group would automatically remove old roles while assigning new, however some users will have privileges above the baseline meaning they must be assigned at the user level. This is why access audits become important, to detect any outstanding privileges at the user level.
 
 
 9. Offboarding
+The last step of user management is offboarding. Once a user leaves, it is important to disable the user account to prevent logins while also removing all privileges given to the account either at the group or user level. It is also important to avoid deleting the account since the logs and compliance data related to it might be needed later. Different companies might have different ways of managing archived accounts, but you can also move the user to a new group meant for archived users.
