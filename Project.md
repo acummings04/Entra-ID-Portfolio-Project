@@ -42,20 +42,24 @@ Since our user in this scenario is a software developer, we should only give rol
 <img width="1592" height="921" alt="Screenshot 2026-09-04 214623" src="https://github.com/user-attachments/assets/2c1b2f50-4837-43ac-b9b5-dc6f711a07bb" />
 
 5. Enforcing MFA
-One of the steps we can take to mitigate the risk of authentication security is enabling MFA for users. By adding an extra layer of security, we can reduce the likelihood of an account compromise through a standard password. One of the better options is the Microsoft authenticator app.
+One of the steps we can take to mitigate the risk of authentication security is enabling MFA for users. By adding an extra layer of security, we can reduce the likelihood of an account compromise through a standard password. One of the better options is the Microsoft authenticator app. To do this for specific users, we can use the per-user MFA option. To set this up we can check any accounts that we want to enable MFA for and configure any settings before enabling MFA.
+<img width="1596" height="932" alt="Screenshot 2026-09-20 152855" src="https://github.com/user-attachments/assets/ee1c6725-f01d-4f46-bfb9-133a888328fe" />
+
+Now when we attempt to sign in with this user's account, we will get a prompt to download and use the Microsoft authenticator app, which is the standard default and recommended method. Although this method of enforcing MFA is helpful in providing an extra layer of security, conditional access is more efficient.
+<img width="1594" height="904" alt="Screenshot 2026-09-20 153749" src="https://github.com/user-attachments/assets/461f4b33-449e-4765-b6f7-9ac7bb8387ad" />
 
 
-6. Conditional Access
+7. Conditional Access
 
 
 
-7. PIM
+8. PIM
 
 
 
-8. Role Change + Access Audit
+9. Role Change + Access Audit
 When a user changes roles it is important to not only provide them with the privileges needed for their new job, but to also remove any old privileges that are no longer needed. This is an important step of the user management lifecycle that helps reduce the risk of excessive privileges as outlined earlier. In this example, when the employee moves from software development to finance, we need to first remove any old privileges related to application development. If we used group assigned roles, moving them to a different security group would automatically remove old roles while assigning new, however some users will have privileges above the baseline meaning they must be assigned at the user level. This is why access audits become important, to detect any outstanding privileges at the user level.
 
 
-9. Offboarding
+10. Offboarding
 The last step of user management is offboarding. Once a user leaves, it is important to disable the user account to prevent logins while also removing all privileges given to the account either at the group or user level. It is also important to avoid deleting the account since the logs and compliance data related to it might be needed later. Different companies might have different ways of managing archived accounts, but you can also move the user to a new group meant for archived users.
