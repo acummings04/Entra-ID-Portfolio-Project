@@ -17,12 +17,12 @@ Need for automated access reviews - Although this project helps define the impor
 maybe lacking authentication
 
 1. Group Creation
-In our simulated company, we have already created 3 security groups categorized by departments. Creating groups is the first step toward managing user identities, and can be used to assign roles and permissions to a group. This allows any roles assigned to the group to be inherited to any users assigned within that group, making permission auditing simpler. For this project, we will only be assigning roles at the user level.
-<img width="1594" height="918" alt="Screenshot 2026-09-03 172857" src="https://github.com/user-attachments/assets/cbe64cb8-3af0-4d4c-9c6c-f1eeef7b9a7c" />
+In our simulated company, we have already created 2 security groups categorized by departments. Creating groups is the first step toward managing user identities, and can be used to assign roles and permissions to a group. This allows any roles assigned to the group to be inherited to any users assigned within that group, making permission auditing simpler. For this project, we will only be assigning roles at the user level.
+<img width="1594" height="936" alt="Screenshot 2026-09-27 170543" src="https://github.com/user-attachments/assets/cbe494d0-540d-473a-8d17-14ab0b32be01" />
 
-While creating our new groups, we will name it after the department title to make user management easier. This is also where we could assign baseline permissions to any users in that department, however we would still need to assign higher privileges at the account level. 
+While creating our new groups, we will name it after the department title to make user management easier. This is also where we can assign baseline permissions to any users in that department, allowing users within that security group to inherit those permissions. 
 
-<img width="1591" height="920" alt="Screenshot 2026-09-03 173510" src="https://github.com/user-attachments/assets/9c895914-9815-4f81-8525-cbe46f547cd8" />
+<img width="1598" height="937" alt="Screenshot 2026-09-27 170619" src="https://github.com/user-attachments/assets/f08acdc9-df77-457a-814d-ae2082ce42a6" />
 
 2. User Creation
 The first part of the user management lifecycle is creating new users. In this project we will create new users using our domain name but it is also possible to invite external users for b2b collaboration. 
