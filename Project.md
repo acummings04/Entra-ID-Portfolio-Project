@@ -25,9 +25,9 @@ While creating our new groups, we will name it after the department title to mak
 <img width="1598" height="937" alt="Screenshot 2026-09-27 170619" src="https://github.com/user-attachments/assets/f08acdc9-df77-457a-814d-ae2082ce42a6" />
 
 2. User Creation
-The first part of the user management lifecycle is creating new users. In this project we will create new users using our domain name but it is also possible to invite external users for b2b collaboration. 
+The first part of the user management lifecycle is creating new users. In this project we will create new users using our given domain but it is also possible to invite external users for b2b collaboration. 
 
-<img width="1598" height="927" alt="Screenshot 2026-09-03 174439" src="https://github.com/user-attachments/assets/1ed10df9-7ddb-4048-9b73-b84ff84caa79" />
+<img width="1597" height="938" alt="Screenshot 2026-09-27 170759" src="https://github.com/user-attachments/assets/3b05749d-4177-4cae-b0f5-d85666a1c9e1" />
 
 <img width="1591" height="936" alt="Screenshot 2026-09-04 213928" src="https://github.com/user-attachments/assets/1a9e49d0-83e5-4cef-9708-ad63a97b165d" />
 
