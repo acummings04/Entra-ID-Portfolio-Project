@@ -29,17 +29,18 @@ The first part of the user management lifecycle is creating new users. In this p
 
 <img width="1597" height="938" alt="Screenshot 2026-09-27 170759" src="https://github.com/user-attachments/assets/3b05749d-4177-4cae-b0f5-d85666a1c9e1" />
 
-<img width="1591" height="936" alt="Screenshot 2026-09-04 213928" src="https://github.com/user-attachments/assets/1a9e49d0-83e5-4cef-9708-ad63a97b165d" />
+This is also where we can give properties to an identity for easier management.
+<img width="1595" height="939" alt="Screenshot 2026-09-27 170840" src="https://github.com/user-attachments/assets/247e60a7-767f-4ef4-9c6a-495ed316db0c" />
 
-We also have the ability to assign a user to a group while creating the user, so we will select the group we created earlier. We also have the ability to assign a role to the user upon creation, however you can also assign roles later as we will do.
+We also have the ability to assign a user to a group while creating the user, so we will select the group we created earlier. We also have the ability to assign a role to the user upon creation, however you can also update or assign new roles later.
 
-<img width="1592" height="936" alt="Screenshot 2026-09-04 214015" src="https://github.com/user-attachments/assets/aba73e2c-45fc-4f75-948c-d976529751d8" />
+<img width="1594" height="936" alt="Screenshot 2026-09-27 171233" src="https://github.com/user-attachments/assets/360e6086-57e8-4145-860f-b42cb0957f35" />
 
 4. Role Assignment
 
-Since our user in this scenario is a software developer, we should only give roles with permissions that are strictly needed for their job. For us this would include roles regarding application development as seen in the screenshot below. The purpose of role based access control is enforce least privilege, meaning that users get the bare minimum permissions they need. This is meant to limit the scope of damage that can be caused in the event of an account breach. This is the first major step in enforcing authorization and is one of the key components of IAM.
+Since our user in this scenario is a billing administrator, we should only give roles with permissions that are strictly needed for their job. For us this would include roles regarding billing as seen in the screenshot below. The purpose of role based access control is enforce least privilege, meaning that users get the bare minimum permissions they need. This is meant to limit the scope of damage that can be caused in the event of an account breach. This is the first major step in enforcing authorization and is one of the key components of IAM.
 
-<img width="1592" height="921" alt="Screenshot 2026-09-04 214623" src="https://github.com/user-attachments/assets/2c1b2f50-4837-43ac-b9b5-dc6f711a07bb" />
+<img width="1598" height="938" alt="Screenshot 2026-09-27 173420" src="https://github.com/user-attachments/assets/ae8143fd-95ac-43c8-b391-90501cfa2ef3" />
 
 5. Enforcing MFA
 One of the steps we can take to mitigate the risk of authentication security is enabling MFA for users. By adding an extra layer of security, we can reduce the likelihood of an account compromise through a standard password. One of the better options is the Microsoft authenticator app. To do this for specific users, we can use the per-user MFA option. To set this up we can check any accounts that we want to enable MFA for and configure any settings before enabling MFA.
@@ -50,7 +51,7 @@ Now when we attempt to sign in with this user's account, we will get a prompt to
 
 
 7. Conditional Access
-
+Conditional access offers greater control compared to per-user MFA since it allows assignment to users or groups, as well as granular control over what conditions require MFA for specific resources.
 
 
 8. PIM
