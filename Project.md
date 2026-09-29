@@ -53,14 +53,34 @@ Now when we attempt to sign in with this user's account, we will get a prompt to
 7. Conditional Access
 Conditional access offers greater control compared to per-user MFA since it allows assignment to users or groups, as well as granular control over what conditions require MFA for specific resources.
 
+We can start by creating a conditional access policy limited to the Finance group we created earlier. This way, only users within this security group will be included in this policy.
+<img width="1597" height="942" alt="Screenshot 2026-09-28 204241" src="https://github.com/user-attachments/assets/7c1fae1e-5624-47b4-b266-a56ac4b9b973" />
 
-8. PIM
+Next we can decide which resources and applications will require MFA, as opposed to per-user MFA being enforced across the board. In this example, we will require MFA for Office.<img width="1598" height="940" alt="Screenshot 2026-09-28 204304" src="https://github.com/user-attachments/assets/b0c9e976-b892-4c38-89a4-d54dbaa2ade8" />
+
+We can also decide which conditions will require MFA, specifically locations and networks. If a company wanted to create a policy requiring remote workers to use MFA while employees on premises did not, we can choose to include all network locations before excluding, or whitelisting the on premises location.
+<img width="1594" height="940" alt="Screenshot 2026-09-28 205451" src="https://github.com/user-attachments/assets/ff9f0bd6-22c1-4477-9b4c-4ae71e9652be" />
+
+We can also choose to whitelist specific devices from this policy through filters, although we will not configure this section in order to enforce this policy across all devices.
+<img width="1598" height="943" alt="Screenshot 2026-09-28 205528" src="https://github.com/user-attachments/assets/5947648d-9165-47d5-b9d2-c8fcd6ef49a5" />
+
+Here is where we can choose which action will grant access. In this case we will set up an MFA policy as shown below.
+<img width="1594" height="940" alt="Screenshot 2026-09-28 205619" src="https://github.com/user-attachments/assets/a9552938-3107-4630-bfe3-070520718396" />
+
+One additional feature that we can configure is the frequency of the MFA requirement. We can set the policy to only need MFA every 24 hours, enhancing security without creating too much of an inconvenience for workers. 
+<img width="1596" height="941" alt="Screenshot 2026-09-28 210945" src="https://github.com/user-attachments/assets/9cfc60ae-a57b-4ff0-9f2e-04ad0d883c59" />
+
+Below is an image of the finalized policy. The major difference between per-user MFA and conditional access is the granularity, specifically the scope of resources affected, easier group enforcement, location restrictions, and frequency.
+<img width="1599" height="940" alt="Screenshot 2026-09-28 211043" src="https://github.com/user-attachments/assets/d97a8595-6b78-4d2e-a6dd-ec3e1e56845e" />
+
+
+9. PIM
 
 
 
-9. Role Change + Access Audit
+10. Role Change + Access Audit
 When a user changes roles it is important to not only provide them with the privileges needed for their new job, but to also remove any old privileges that are no longer needed. This is an important step of the user management lifecycle that helps reduce the risk of excessive privileges as outlined earlier. In this example, when the employee moves from the finance department to IT, we need to first remove any old privileges related to application development. Since we used group assigned roles, moving our user to a different security group will automatically remove old roles while assigning new ones. One problem however, is that some users will need privileges above the baseline meaning they must be assigned at the user level. Roles assigned at the user level can easily be forgotten and maintained during role changes, which is why access audits become important for detecting any outstanding privileges.
 
 
-10. Offboarding
+11. Offboarding
 The last step of user management is offboarding. Once a user leaves, it is important to disable the user account to prevent logins while also removing all privileges given to the account either at the group or user level. It is also important to avoid deleting the account since the logs and compliance data related to it might be needed later. Different companies might have different ways of managing archived accounts, but you can also move the user to a new group meant for archived users.
